@@ -22,10 +22,13 @@ Once this bit has been set, the SD card is no longer required. **Note that any c
 
 You can use any SD card running Raspbian or Raspbian Lite to program the OTP bit.
 
-Enable USB host boot mode with this code:
-
+Enable USB host boot mode with this code for Raspian:
 ```bash
 echo program_usb_boot_mode=1 | sudo tee -a /boot/config.txt
+```
+Enable USB host boot mode with this code for Ubuntu:
+```bash
+echo program_usb_boot_mode=1 | sudo tee -a /boot/firmware/config.txt
 ```
 
 This adds `program_usb_boot_mode=1` to the end of `/boot/config.txt`.
